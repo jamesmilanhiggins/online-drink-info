@@ -81,7 +81,7 @@ margarita.value = 11;
 margarita.img = "img/tequila/margarita.png";
 
 var longIsland = new Recipe ("Long Island Iced Tea" , "instructions");
-longIsland.ingredients.push("1 (1.5 fluid ounce) jigger vodka", "1 (1.5 fluid ounce) jigger gin", "1 (1.5 fluid ounce) jigger rum". "1 (1.5 fluid ounce) jigger triple sec liqueur", "1 teaspoon tequila", "2 teaspoons orange juice", "2 fluid ounces cola-flavored carbonated beverage", "1 wedge lemon");
+longIsland.ingredients.push("1 (1.5 fluid ounce) jigger vodka", "1 (1.5 fluid ounce) jigger gin", "1 (1.5 fluid ounce) jigger rum", "1 (1.5 fluid ounce) jigger triple sec liqueur", "1 teaspoon tequila", "2 teaspoons orange juice", "2 fluid ounces cola-flavored carbonated beverage", "1 wedge lemon");
 longIsland.instructions = "In a cocktail mixer full of ice, combine vodka, gin, rum, triple sec and tequila. Add orange juice and cola. Shake vigorously until frothy. Strain into a Collins glass filled with ice, and garnish with wedge of lemon.";
 longIsland.value = 12;
 longIsland.img = "img/tequila/long-island.png";
