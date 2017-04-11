@@ -15,14 +15,28 @@ function Recipe(name,ingredients,instructions, value, img, type) {
   this.type = type;
 }
 
-RecipeBook.prototype.displayRecipe = function(thing) {
-  this.recipes.forEach(function(recipe){
-    var recipeType = recipe.type;
-    if (recipeType === "Vodka") {
-      $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
-    }
-  });
-};
+// RecipeBook.prototype.displayRecipe = function() {
+//   this.recipes.forEach(function(recipe){
+//       $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
+//     });
+//
+//
+//
+//     $(".clickable-recipe-name").last().click(function(){
+//       $(".display-image").empty().append("<img src=" + recipe.img + ">");
+//       $(".display-recipe-instructions").empty();
+//       $("#display-ingredients").empty();
+//       $(".display-recipe-info h2").empty();
+//       $(".display-clickable-recipe").text("");
+//       $(".display-recipe-info h2").append(recipe.name);
+//       recipe.ingredients.forEach(function(ingredient){
+//         $("#display-ingredients").append("<li>" + ingredient + "</li>")
+//         });
+//       $(".display-recipe-instructions").append(recipe.instructions);
+//       });
+//     };
+
+
 
 
 //-------------------- recipes created as objects
@@ -169,6 +183,7 @@ $(document).ready(function(){
       $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
 
       $(".clickable-recipe-name").last().click(function(){
+        $(".display-image").empty().append("<img src=" + recipe.img + ">");
         $(".display-recipe-instructions").empty();
         $("#display-ingredients").empty();
         $(".display-recipe-info h2").empty();
@@ -180,48 +195,34 @@ $(document).ready(function(){
         $(".display-recipe-instructions").append(recipe.instructions);
         });
         };
-      });
     });
-
-      $("#test").click(function(){
-      newRecipeBook.displayRecipe();
-        });
+  });
 
 
 
+      $(".alcoholBottle").click(function() {
+        $(".display-clickable-recipe").text("");
+        var alcoholName = $(this).attr("alt");
+        newRecipeBook.recipes.forEach(function(recipe){
+          var recipeType = recipe.type;
+          if (recipeType === alcoholName) {
+          $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
+          }
 
+          $(".clickable-recipe-name").last().click(function(){
+                $(".display-image").empty().append("<img src=" + recipe.img + ">");
+                $(".display-recipe-instructions").empty();
+                $("#display-ingredients").empty();
+                $(".display-recipe-info h2").empty();
+                $(".display-recipe-info h2").append(recipe.name);
+                recipe.ingredients.forEach(function(ingredient){
+                  $("#display-ingredients").append("<li>" + ingredient + "</li>")
+                  });
+                $(".display-recipe-instructions").append(recipe.instructions);
+              });
 
-    $("#vodkaBottleImg").click(function(){
-        $(".drinkDisplay").text("");
-      newRecipeBook.recipes.forEach(function(recipe) {
-        var recipeType = recipe.type;
-        if (recipeType === "Vodka") {
-          $(".drinkDisplay").append(recipe.name);
-        }
-      })
-    });
-
-    $("#tequilaBottleImg").click(function(){
-      $(".drinkDisplay").text("");
-      newRecipeBook.recipes.forEach(function(recipe) {
-        var recipeType = recipe.type;
-        if (recipeType === "Tequila") {
-          $(".drinkDisplay").append(recipe.name);
-        }
-      })
-    });
-
-    $("#whiskeyBottleImg").click(function(){
-        $(".drinkDisplay").text("");
-      newRecipeBook.recipes.forEach(function(recipe) {
-        var recipeType = recipe.type;
-        if (recipeType === "Whiskey") {
-          $(".drinkDisplay").append(recipe.name);
-        }
-      })
-    });
-
-
+            });
+          });
 });
 
 

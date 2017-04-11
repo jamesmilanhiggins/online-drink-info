@@ -75,3 +75,6 @@ margin-top: 75px;
   color: black;
   border: 2px solid black;
 }
+
+$(".alcoholBottle").click(function(){
+  var alcoholName = $(this).attr("alt");
