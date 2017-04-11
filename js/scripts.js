@@ -126,6 +126,7 @@ $(document).ready(function(){
     var recipeValue = thing.value;
     if (randomNumber === recipeValue) {
       $(".display-recipe-names").append("<li class=clickable-recipe-name>" + thing.name + "</li>")
+      console.log(thing.value);
 
       $(".clickable-recipe-name").click(function(){
         $(".display-recipes").append("<h2>" + thing.name + "</h2>") +
@@ -142,10 +143,8 @@ $(document).ready(function(){
 //
 // )
 
-
+          });
+        };
       });
-
-
-      };
     });
-  });
+    });
