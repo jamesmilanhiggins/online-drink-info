@@ -1,10 +1,10 @@
-
+//---------Back End Logic
+//--------------- Constructor for recipe book object
 function RecipeBook (recipes) {
   this.recipes = [];
 };
 
 //-------------- Constructor for recipe object
-
 function Recipe(name,ingredients,instructions, value, img, type) {
   this.name = name;
   this.ingredients = [];
@@ -14,29 +14,6 @@ function Recipe(name,ingredients,instructions, value, img, type) {
   this.img = img;
   this.type = type;
 }
-
-// RecipeBook.prototype.displayRecipe = function() {
-//   this.recipes.forEach(function(recipe){
-//       $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
-//     });
-//
-//
-//
-//     $(".clickable-recipe-name").last().click(function(){
-//       $(".display-image").empty().append("<img src=" + recipe.img + ">");
-//       $(".display-recipe-instructions").empty();
-//       $("#display-ingredients").empty();
-//       $(".display-recipe-info h2").empty();
-//       $(".display-clickable-recipe").text("");
-//       $(".display-recipe-info h2").append(recipe.name);
-//       recipe.ingredients.forEach(function(ingredient){
-//         $("#display-ingredients").append("<li>" + ingredient + "</li>")
-//         });
-//       $(".display-recipe-instructions").append(recipe.instructions);
-//       });
-//     };
-
-
 
 
 //-------------------- recipes created as objects
@@ -151,7 +128,7 @@ tequilaSunrise.img = "img/tequila/tequila-sunrise.png";
 tequilaSunrise.type = "Tequila";
 
 var newRecipeBook = new RecipeBook ();
-newRecipeBook.recipes.push(mule, bloodyMary, screwDriver, vodkaMartini, cosmo, hotToddy, oldFashioned, irishCoffee, whiskeySour, margarita, longIsland, paloma, bloodyMaria, tequilaSunrise);
+newRecipeBook.recipes.push(mule, bloodyMary, screwDriver, vodkaMartini, cosmo, hotToddy, oldFashioned, irishCoffee, whiskeyCoke, whiskeySour, margarita, longIsland, paloma, bloodyMaria, tequilaSunrise);
 
 //---------method to list each ingredient within the recipe
 Recipe.prototype.displayIngredients = function () {
@@ -162,26 +139,24 @@ Recipe.prototype.displayIngredients = function () {
   });
 };
 
-
+//---------------- Front End Logic
 $(document).ready(function(){
-
+//--------------------DRINK RANDOMIZER------------------
   $("button[name=old-enough-button]").click(function(){
   $("#confirm-age-section").hide();
   $("#main-section").show();
   });
-// $("button[name=too-young-button]").click(function(){
-//
-// });
 
-//---------- click function for randomizer
+//---------- click function for random drink that adds a clickable drink name
   $("#random-number-button").click(function(){
     $(".display-clickable-recipe").empty();
     var randomNumber = Math.floor(Math.random() *15 + 1)
+    console.log(randomNumber);
     newRecipeBook.recipes.forEach(function(recipe){
     var recipeValue = recipe.value;
     if (randomNumber === recipeValue) {
       $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
-
+//---------------- click funciton that shows recipe details based off clickable drink name for drink randomizer
       $(".clickable-recipe-name").last().click(function(){
         $(".display-image").empty().append("<img src=" + recipe.img + ">");
         $(".display-recipe-instructions").empty();
@@ -198,8 +173,8 @@ $(document).ready(function(){
     });
   });
 
-
-
+//-------------LIQUOR TREE----------------------------
+//-------------- Click function for liquor tree that sets a variable equal to the type of alcohol that the image represents and builds clickable drink names based off the type of alcohol that the user chooses.
       $(".alcoholBottle").click(function() {
         $(".display-clickable-recipe").text("");
         var alcoholName = $(this).attr("alt");
@@ -208,7 +183,7 @@ $(document).ready(function(){
           if (recipeType === alcoholName) {
           $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
           }
-
+//--------------Click function that displays drink recipe info for the liquor tree
           $(".clickable-recipe-name").last().click(function(){
                 $(".display-image").empty().append("<img src=" + recipe.img + ">");
                 $(".display-recipe-instructions").empty();

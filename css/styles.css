@@ -60,6 +60,7 @@
 }
 .container {
 margin-top: 75px;
+height:600px;
 }
 .clickable-recipe-name:hover {
   font-size: 30px;
