@@ -41,4 +41,43 @@
   border: 3px solid white;
   z-index: 7;
   color: white;
-};
+}
+
+/*.containertest:hover {
+  color: red;
+  border: red;
+  opacity: .2;
+  transition: all 0.5s;
+}*/
+
+
+/*
+#vodkaBottleImg:hover{
+  opacity: 1;
+  height: 700px;
+}*/
+
+.alcoholBottle {
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 2s;
+    height: 300px;
+    width: auto;
+    margin-left: 200px;
+    vertical-align: top;
+
+
+}
+.alcoholBottle:hover {
+  height: 40%;
+
+}
+
+#containertest:hover > .alcoholBottle:not(:hover) {
+    opacity: 0.3;
+    transition: all 1s;
+  }
+.container {
+
+  margin-top: 75px;
+
+}
