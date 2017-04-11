@@ -157,4 +157,15 @@ $(document).ready(function(){
         };
       });
     });
+
+    $("#vodkaBottleImg").click(function(){
+      newRecipeBook.recipes.forEach(function(recipe) {
+        var recipeType = recipe.type;
+        if (recipeType === "Vodka") {
+          $(".drinkDisplay").append(recipe.name);
+        }
+      })
+    });
+
+
     });

@@ -25,7 +25,7 @@ bloodyMary.ingredients.push("4 oz. Sacramento tomato juice" , "2 dashes Worceste
 bloodyMary.instructions = "Make Spicy Bloody Mary Mix: Combine tomato juice, Worcestershire, celery salt, black pepper, Tabasco, lemon, and horseradish. Vigorously shake vodka and bloody mary mix. Garnish with olives and lemon wedge."
 bloodyMary.value = 2;
 bloodyMary.img = "img/vodka/bloody-mary.png";
-bloodMary.type = "Vodka";
+bloodyMary.type = "Vodka";
 
 var screwDriver = new Recipe ("Screwdriver" , "instructions");
 screwDriver.ingredients.push("1½ oz. Smirnoff Orange Vodka" , "3 oz. orange juice");
@@ -172,4 +172,37 @@ $(document).ready(function(){
         };
       });
     });
+
+
+    $("#vodkaBottleImg").click(function(){
+        $(".drinkDisplay").text("");
+      newRecipeBook.recipes.forEach(function(recipe) {
+        var recipeType = recipe.type;
+        if (recipeType === "Vodka") {
+          $(".drinkDisplay").append(recipe.name);
+        }
+      })
+    });
+
+    $("#tequilaBottleImg").click(function(){
+      $(".drinkDisplay").text("");
+      newRecipeBook.recipes.forEach(function(recipe) {
+        var recipeType = recipe.type;
+        if (recipeType === "Tequila") {
+          $(".drinkDisplay").append(recipe.name);
+        }
+      })
+    });
+
+    $("#whiskeyBottleImg").click(function(){
+        $(".drinkDisplay").text("");
+      newRecipeBook.recipes.forEach(function(recipe) {
+        var recipeType = recipe.type;
+        if (recipeType === "Whiskey") {
+          $(".drinkDisplay").append(recipe.name);
+        }
+      })
+    });
+
+
     });
