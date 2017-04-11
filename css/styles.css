@@ -1,6 +1,4 @@
-#main-section {
-  display: none;
-}
+
 #confirm-age-section {
   background-image: url(../img/bar.jpg);
   display: block;
@@ -9,13 +7,39 @@
   background-size: cover;
   position: fixed;
 }
-#overlay {
+#confirm-age-section a {
+  border-radius: 10px;
+  font-size: 20px;
+  border: 3px solid white;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 15px;
+  margin-top: 20%;
+}
+#confirm-age-section a:hover {
+  color: rgba(0, 198, 255, 1);
+  text-shadow: 1px 1px 4px black;
+}
+
+liquor-tree.html body {
+  color: white;
+}
+.background-image img {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-size: cover;
+  z-index: -2;
+  background-color: rgba(0, 0, 0, 4);
+}
+.overlay {
   transition: 3s;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   left: 0;
+  z-index: -1;
 }
 
 #overlay:hover {
@@ -25,6 +49,7 @@
   position: fixed;
   background-color: rgba(0, 0, 0, 0.0);
 }
+
 .front-page-button {
   margin-left: 32%;
   text-align: center;
@@ -42,18 +67,18 @@
   color: white;
 }
 
+.alcoholBottle:hover {
+  height: 400px;
+}
 .alcoholBottle {
     -webkit-transition: opacity 0.3s;
     transition: opacity 2s;
     height: 300px;
     width: auto;
-    margin-left: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
     vertical-align: top;
 }
-.alcoholBottle:hover {
-  height: 40%;
-}
-
 #containertest:hover > .alcoholBottle:not(:hover) {
     opacity: 0.3;
     transition: all 1s;
@@ -77,5 +102,10 @@ height:600px;
   border: 2px solid black;
 }
 
-$(".alcoholBottle").click(function(){
-  var alcoholName = $(this).attr("alt");
+.display-recipe-info h2 {
+  font-family: 'Satisfy', cursive;
+}
+.container h2 {
+  text-align: center;
+  font-family: 'Satisfy', cursive;
+}

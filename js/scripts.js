@@ -106,7 +106,7 @@ longIsland.value = 12;
 longIsland.img = "img/tequila/long-island.png";
 longIsland.type = "Tequila";
 
-var paloma = new Recipe ("paloma" , "instructions");
+var paloma = new Recipe ("Paloma" , "instructions");
 paloma.ingredients.push("2 fluid ounces tequila", "1 1/2 tablespoons lime juice", "1 pinch salt", "3 cubes ice, or as desired", "6 fluid ounces diet grapefruit soda");
 paloma.instructions = "Combine the tequila, lime juice, and salt in a tall glass. Add ice, top off with diet grapefruit soda, and stir.";
 paloma.value = 13;
@@ -143,6 +143,7 @@ Recipe.prototype.displayIngredients = function () {
 $(document).ready(function(){
 //--------------------DRINK RANDOMIZER------------------
   $("button[name=old-enough-button]").click(function(){
+
   $("#confirm-age-section").hide();
   $("#main-section").show();
   });
@@ -199,15 +200,3 @@ $(document).ready(function(){
             });
           });
 });
-
-
-
-
-  //                                       "<ul><li>" + thing.displayIngredients() +
-  //                                       // thing.ingredients.forEach(function(ingredient){
-  //                                       //    monkey += ingredient })
-  //                                       //     + monkey
-  //                                        "</li></ul>" +
-  //                                       "<p>" + thing.instructions + "</p>"
-  //
-  // )
