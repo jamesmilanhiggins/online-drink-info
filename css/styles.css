@@ -1,7 +1,6 @@
 #main-section {
   display: none;
 }
-
 #confirm-age-section {
   background-image: url(../img/bar.jpg);
   display: block;
@@ -27,7 +26,7 @@
   background-color: rgba(0, 0, 0, 0.0);
 }
 .front-page-button {
-  margin-left: 45%;
+  margin-left: 32%;
   text-align: center;
   border: 2px solid white;
   background-color: rgba(0, 0, 0, 0);
@@ -43,20 +42,6 @@
   color: white;
 }
 
-/*.containertest:hover {
-  color: red;
-  border: red;
-  opacity: .2;
-  transition: all 0.5s;
-}*/
-
-
-/*
-#vodkaBottleImg:hover{
-  opacity: 1;
-  height: 700px;
-}*/
-
 .alcoholBottle {
     -webkit-transition: opacity 0.3s;
     transition: opacity 2s;
@@ -64,20 +49,29 @@
     width: auto;
     margin-left: 200px;
     vertical-align: top;
-
-
 }
 .alcoholBottle:hover {
   height: 40%;
-
 }
 
 #containertest:hover > .alcoholBottle:not(:hover) {
     opacity: 0.3;
     transition: all 1s;
-  }
+}
 .container {
-
-  margin-top: 75px;
-
+margin-top: 75px;
+}
+.clickable-recipe-name:hover {
+  font-size: 30px;
+}
+.clickable-recipe-name {
+  text-decoration: underline;
+  color: rgba(0, 198, 255, 1);
+  text-shadow: 1px 1px 2px black;
+  font-size: 20px;
+}
+#random-number-button {
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  border: 2px solid black;
 }

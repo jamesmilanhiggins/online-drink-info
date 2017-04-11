@@ -4,49 +4,67 @@ function RecipeBook (recipes) {
 };
 
 //-------------- Constructor for recipe object
-function Recipe(name,ingredients,instructions, type, value, img) {
+
+function Recipe(name,ingredients,instructions, value, img, type) {
   this.name = name;
   this.ingredients = [];
   this.instructions = instructions;
   this.type = type;
   this.value = value;
   this.img = img;
+  this.type = type;
 }
+
+RecipeBook.prototype.displayRecipe = function(thing) {
+  this.recipes.forEach(function(recipe){
+    var recipeType = recipe.type;
+    if (recipeType === "Vodka") {
+      $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
+    }
+  });
+};
+
+
 //-------------------- recipes created as objects
 var mule = new Recipe ("Moscow Mule", "instructions");
 mule.ingredients.push("1 1/2 oz. Vodka", "1/2 oz. fresh lime juice", "1/4oz simple syrup", "ginger beer", "lime wedges for garnish");
 mule.instructions = "Lightly shake vodka, lime juice, and simple syrup. Add ginger beer and shake. Serve in a copper mug and garnish with lime wedge."
 mule.value = 1;
 mule.img = "img/vodka/moscow-mule.png";
-mule.type = "Vodka";
+mule.type = "Vodka"
+
 
 var bloodyMary = new Recipe ("Bloody Mary" , "instructions");
 bloodyMary.ingredients.push("4 oz. Sacramento tomato juice" , "2 dashes Worcestershire sauce" , "pinch of celery salt", "Pinch of freshly ground black pepper", "3 dashes Tabasco sauce" , "1 squeeze lemon" , "1 tsp. fresh horseradish" , "2 oz. vodka, preferably Finlandia" , "Olives, for garnish" , "Lemon wedge, for garnish");
 bloodyMary.instructions = "Make Spicy Bloody Mary Mix: Combine tomato juice, Worcestershire, celery salt, black pepper, Tabasco, lemon, and horseradish. Vigorously shake vodka and bloody mary mix. Garnish with olives and lemon wedge."
 bloodyMary.value = 2;
 bloodyMary.img = "img/vodka/bloody-mary.png";
-bloodyMary.type = "Vodka";
+bloodyMary.type = "Vodka"
+
 
 var screwDriver = new Recipe ("Screwdriver" , "instructions");
-screwDriver.ingredients.push("1½ oz. Smirnoff Orange Vodka" , "3 oz. orange juice");
+screwDriver.ingredients.push("1 1/2 oz. Smirnoff Orange Vodka" , "3 oz. orange juice");
 screwDriver.instructions = "Fill glass with ice. Add Smirnoff Orange Flavored Vodka and orange juice. Stir well. Garnish with orange slice.";
 screwDriver.value = 3;
 screwDriver.img = "img/vodka/screw-driver.png";
-screwDriver.type = "Vodka";
+screwDriver.type = "Vodka"
+
 
 var vodkaMartini = new Recipe ("Vodka Martini" , "instructions");
 vodkaMartini.ingredients.push("3 fluid ounces vodka", "1 cup ice cubes", "3 olives", "1 fluid ounce dry vermouth");
 vodkaMartini.instructions = "Combine vodka and dry vermouth in a cocktail mixing glass. Fill with ice and stir until chilled. Strain into a chilled martini glass. Garnish with three olives on a toothpick.";
 vodkaMartini.value = 4;
 vodkaMartini.img = "img/vodka/vodka-martini.png";
-vodkaMartini.type = "Vodka";
+vodkaMartini.type = "Vodka"
+
 
 var cosmo = new Recipe ("Cosmopolitan" , "instructions");
 cosmo.ingredients.push("1 3/4 oz. lemon vodka", "preferably Crop Meyer Lemon Vodka", "1/2 oz. Cointreau."," 1/2 oz. cranberry juice", "1/2 oz. lime juice", "1/4 oz. simple syrup", "Lime wedge, for garnish.");
 cosmo.instructions = "Shake vodka, Cointreau, cranberry juice, lime juice, and simple syrup. Pour over a coupe. Garnish with lime wedge.";
 cosmo.value = 5;
 cosmo.img = "img/vodka/cosmo.png";
-cosmo.type = "Vodka";
+cosmo.type = "Vodka"
+
 
 var hotToddy = new Recipe ("Hot Toddy" , "instructions");
 hotToddy.ingredients.push("1 cinnamon stick", "1 slice lemon", "1 pinch ground nutmeg", "1 teaspoon honey", "2 fluid ounces boiling water", "1 1/2 fluid ounces whiskey.");
@@ -136,42 +154,41 @@ $(document).ready(function(){
   $("button[name=old-enough-button]").click(function(){
   $("#confirm-age-section").hide();
   $("#main-section").show();
-});
+  });
 // $("button[name=too-young-button]").click(function(){
 //
 // });
 
-
+//---------- click function for randomizer
   $("#random-number-button").click(function(){
-    $(".display-recipe ul").empty();
-    $(".display-recipes").empty();
+    $(".display-clickable-recipe").empty();
     var randomNumber = Math.floor(Math.random() *15 + 1)
     newRecipeBook.recipes.forEach(function(recipe){
     var recipeValue = recipe.value;
     if (randomNumber === recipeValue) {
-      $(".display-recipe-names").append("<li class=clickable-recipe-name>" + recipe.name + "</li>")
+      $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
 
-
-      $(".clickable-recipe-name").click(function(){
-
-        $(".display-recipes").append("<h2>" + recipe.name + "</h2>") +
-            recipe.ingredients.forEach(function(ingredient){
-
-              $(".display-recipes ul").append("<li>" + ingredient + "</li>")
-            });
-//                                       "<ul><li>" + thing.displayIngredients() +
-//                                       // thing.ingredients.forEach(function(ingredient){
-//                                       //    monkey += ingredient })
-//                                       //     + monkey
-//                                        "</li></ul>" +
-//                                       "<p>" + thing.instructions + "</p>"
-//
-// )
-
+      $(".clickable-recipe-name").last().click(function(){
+        $(".display-recipe-instructions").empty();
+        $("#display-ingredients").empty();
+        $(".display-recipe-info h2").empty();
+        $(".display-clickable-recipe").text("");
+        $(".display-recipe-info h2").append(recipe.name);
+        recipe.ingredients.forEach(function(ingredient){
+          $("#display-ingredients").append("<li>" + ingredient + "</li>")
           });
+        $(".display-recipe-instructions").append(recipe.instructions);
+        });
         };
       });
     });
+
+      $("#test").click(function(){
+      newRecipeBook.displayRecipe();
+        });
+
+
+
 
 
     $("#vodkaBottleImg").click(function(){
@@ -205,4 +222,16 @@ $(document).ready(function(){
     });
 
 
-    });
+});
+
+
+
+
+  //                                       "<ul><li>" + thing.displayIngredients() +
+  //                                       // thing.ingredients.forEach(function(ingredient){
+  //                                       //    monkey += ingredient })
+  //                                       //     + monkey
+  //                                        "</li></ul>" +
+  //                                       "<p>" + thing.instructions + "</p>"
+  //
+  // )
