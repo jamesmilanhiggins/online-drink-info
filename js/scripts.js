@@ -121,40 +121,48 @@ $(document).ready(function(){
   $("button[name=old-enough-button]").click(function(){
   $("#confirm-age-section").hide();
   $("#main-section").show();
-});
+  });
 // $("button[name=too-young-button]").click(function(){
 //
 // });
 
 
   $("#random-number-button").click(function(){
-    $(".display-recipe ul").empty();
-    $(".display-recipes").empty();
+
+
     var randomNumber = Math.floor(Math.random() *15 + 1)
     newRecipeBook.recipes.forEach(function(recipe){
     var recipeValue = recipe.value;
     if (randomNumber === recipeValue) {
-      $(".display-recipe-names").append("<li class=clickable-recipe-name>" + recipe.name + "</li>")
+      $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
 
-
-      $(".clickable-recipe-name").click(function(){
-
-        $(".display-recipes").append("<h2>" + recipe.name + "</h2>") +
-            recipe.ingredients.forEach(function(ingredient){
-
-              $(".display-recipes ul").append("<li>" + ingredient + "</li>")
-            });
-//                                       "<ul><li>" + thing.displayIngredients() +
-//                                       // thing.ingredients.forEach(function(ingredient){
-//                                       //    monkey += ingredient })
-//                                       //     + monkey
-//                                        "</li></ul>" +
-//                                       "<p>" + thing.instructions + "</p>"
-//
-// )
-
+      $(".clickable-recipe-name").last().click(function(){
+        $(".display-recipe-instructions").empty();
+        $("#display-ingredients").empty();
+        $(".display-recipe-info h2").empty();
+        $(".display-clickable-recipe").text("");
+        $(".display-recipe-info h2").append(recipe.name);
+        recipe.ingredients.forEach(function(ingredient){
+          $("#display-ingredients").append("<li>" + ingredient + "</li>")
           });
+        $(".display-recipe-instructions").append(recipe.instructions);
+        });
         };
       });
     });
-    });
+
+
+
+  });
+
+
+
+
+  //                                       "<ul><li>" + thing.displayIngredients() +
+  //                                       // thing.ingredients.forEach(function(ingredient){
+  //                                       //    monkey += ingredient })
+  //                                       //     + monkey
+  //                                        "</li></ul>" +
+  //                                       "<p>" + thing.instructions + "</p>"
+  //
+  // )
