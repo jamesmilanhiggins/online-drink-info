@@ -1,0 +1,44 @@
+#main-section {
+  display: none;
+}
+
+#confirm-age-section {
+  background-image: url(../img/bar.jpg);
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: fixed;
+}
+#overlay {
+  transition: 3s;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  left: 0;
+}
+
+#overlay:hover {
+  transition: 3s ease;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+.front-page-button {
+  margin-left: 45%;
+  text-align: center;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+}
+#user-age-question {
+  padding: 4%;
+  position: fixed;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20%;
+  border: 3px solid white;
+  z-index: 7;
+  color: white;
+};

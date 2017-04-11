@@ -120,17 +120,29 @@ Recipe.prototype.displayIngredients = function () {
 
 $(document).ready(function(){
 
+  $("button[name=old-enough-button]").click(function(){
+  $("#confirm-age-section").hide();
+  $("#main-section").show();
+});
+// $("button[name=too-young-button]").click(function(){
+//
+// });
+
+
   $("#random-number-button").click(function(){
+    $(".display-recipe ul").empty();
+    $(".display-recipes").empty();
     var randomNumber = randomNumberGenerator();
-    newRecipeBook.recipes.forEach(function(thing){
-    var recipeValue = thing.value;
+    newRecipeBook.recipes.forEach(function(recipe){
+    var recipeValue = recipe.value;
     if (randomNumber === recipeValue) {
-      $(".display-recipe-names").append("<li class=clickable-recipe-name>" + thing.name + "</li>")
-      console.log(thing.value);
+      $(".display-recipe-names").append("<li class=clickable-recipe-name>" + recipe.name + "</li>")
+      
 
       $(".clickable-recipe-name").click(function(){
-        $(".display-recipes").append("<h2>" + thing.name + "</h2>") +
-            thing.ingredients.forEach(function(ingredient){
+
+        $(".display-recipes").append("<h2>" + recipe.name + "</h2>") +
+            recipe.ingredients.forEach(function(ingredient){
 
               $(".display-recipes ul").append("<li>" + ingredient + "</li>")
             });
