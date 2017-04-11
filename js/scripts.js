@@ -117,20 +117,35 @@ Recipe.prototype.displayIngredients = function () {
   });
 };
 
+
 $(document).ready(function(){
 
   $("#random-number-button").click(function(){
     var randomNumber = randomNumberGenerator();
-
-
-
-    newRecipeBook.recipes.forEach(function(recipe){
-      var recipeValue = recipe.value;
+    newRecipeBook.recipes.forEach(function(thing){
+    var recipeValue = thing.value;
     if (randomNumber === recipeValue) {
-      $(".display").text(recipe.name);
-    } else {
-      console.log("in else statement");
+      $(".display-recipe-names").append("<li class=clickable-recipe-name>" + thing.name + "</li>")
+
+      $(".clickable-recipe-name").click(function(){
+        $(".display-recipes").append("<h2>" + thing.name + "</h2>") +
+            thing.ingredients.forEach(function(ingredient){
+
+              $(".display-recipes ul").append("<li>" + ingredient + "</li>")
+            });
+//                                       "<ul><li>" + thing.displayIngredients() +
+//                                       // thing.ingredients.forEach(function(ingredient){
+//                                       //    monkey += ingredient })
+//                                       //     + monkey
+//                                        "</li></ul>" +
+//                                       "<p>" + thing.instructions + "</p>"
+//
+// )
+
+
+      });
+
+
       };
     });
   });
-});
