@@ -1,6 +1,4 @@
-var randomNumberGenerator = function() {
-  return Math.floor(Math.random() *15 + 1)
-};
+
 function RecipeBook (recipes) {
   this.recipes = [];
 };
@@ -132,12 +130,12 @@ $(document).ready(function(){
   $("#random-number-button").click(function(){
     $(".display-recipe ul").empty();
     $(".display-recipes").empty();
-    var randomNumber = randomNumberGenerator();
+    var randomNumber = Math.floor(Math.random() *15 + 1)
     newRecipeBook.recipes.forEach(function(recipe){
     var recipeValue = recipe.value;
     if (randomNumber === recipeValue) {
       $(".display-recipe-names").append("<li class=clickable-recipe-name>" + recipe.name + "</li>")
-      
+
 
       $(".clickable-recipe-name").click(function(){
 
