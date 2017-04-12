@@ -143,36 +143,35 @@ Recipe.prototype.displayIngredients = function () {
 
 //---------------- Front End Logic
 $(document).ready(function(){
-//--------------------DRINK RANDOMIZER------------------
+//--------------- click function to confirm users age
   $("button[name=old-enough-button]").click(function(){
-
   $("#confirm-age-section").hide();
   $("#main-section").show();
   });
 
 
+  //--------------------DRINK RANDOMIZER------------------
 //---------------- click function that generates a random recipe and displays the recipe details
   $("#random-number-button").click(function(){
-
-        $(".display-clickable-recipe").empty();
-        var randomNumber = Math.floor(Math.random() *15 + 1)
-        console.log(randomNumber);
-        newRecipeBook.recipes.forEach(function(recipe){
-          var recipeValue = recipe.value;
-          if (randomNumber === recipeValue) {
-            $(".display-image").empty().append("<img src=" + recipe.img + ">");
-            $(".display-recipe-instructions").empty();
-            $("#display-ingredients").empty();
-            $(".display-recipe-info h2").empty();
-            $(".display-clickable-recipe").text("");
-            $(".display-recipe-info h2").append(recipe.name);
-            recipe.ingredients.forEach(function(ingredient){
-              $("#display-ingredients").append("<li>" + ingredient + "</li>")
-            });
-            $(".display-recipe-instructions").append(recipe.instructions);
-          };
+    $("#display-recipe-group").show();
+    $(".display-clickable-recipe").empty();
+    var randomNumber = Math.floor(Math.random() *15 + 1);
+    newRecipeBook.recipes.forEach(function(recipe){
+      var recipeValue = recipe.value;
+      if (randomNumber === recipeValue) {
+        $(".display-image").empty().append("<img src=" + recipe.img + ">");
+        $(".display-recipe-instructions").empty();
+        $("#display-ingredients").empty();
+        $(".display-recipe-info h2").empty();
+        $(".display-clickable-recipe").text("");
+        $(".display-recipe-info h2").append(recipe.name);
+        recipe.ingredients.forEach(function(ingredient){
+          $("#display-ingredients").append("<li>" + ingredient + "</li>")
         });
-      });
+        $(".display-recipe-instructions").append(recipe.instructions);
+      };
+    });
+  });
 
 
 //-------------LIQUOR TREE----------------------------
@@ -187,6 +186,7 @@ $(document).ready(function(){
         } else {return;}
 //--------------Click function that displays drink recipe info for the liquor tree
           $(".clickable-recipe-name").last().click(function(){
+            $(".display-recipe-info").show();
                 $(".display-image").empty().append("<img src=" + recipe.img + ">");
                 $(".display-recipe-instructions").empty();
                 $("#display-ingredients").empty();

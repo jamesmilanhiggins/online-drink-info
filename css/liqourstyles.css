@@ -10,12 +10,15 @@ body {
   margin-right: 20%;
 }
 .display-recipe-info h2 {
+  font-size: 35px;
   text-align: center;
   font-family: 'Satisfy', cursive;
 }
 .display-recipe-info {
+  display: none;
   margin-top: 20px;
   padding: 20px;
+  border-radius: 10px;
   border: 1px solid white;
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 20px;
@@ -87,6 +90,7 @@ margin-top: 75px;
 height:500px;
 }
 .container h2 {
+  text-shadow: 4px 4px 8px black;
   font-family: 'Kavoon';
   font-size: 60px;
 }

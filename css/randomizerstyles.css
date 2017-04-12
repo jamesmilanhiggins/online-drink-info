@@ -48,6 +48,7 @@ body {
 
 
 #display-recipe-group {
+  display: none;
   background-color: rgba(70, 70, 70, 0.6);
   /*opacity: .8;*/
   border-radius: 10px;
