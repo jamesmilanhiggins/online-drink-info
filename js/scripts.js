@@ -201,4 +201,9 @@ $(document).ready(function(){
 
             });
           });
+
+    // $(".display-recipe-info").click(function(){
+    //   $(".display-recipe-info").toggleClass("slide-out");
+    // });
+
 });

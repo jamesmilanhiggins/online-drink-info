@@ -4,18 +4,20 @@
     <title>Drink Info</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/randomizerstyles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.0.js"></script>
     <script src="js/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
   </head>
   <body>
     <div id="main-section">
+      <div class="background-image">
+        <div class="overlay"></div>
+        <img src="img/bar3.jpg" alt="" />
+      </div>
       <nav class="navbar navbar-default">
         <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
-
-
-
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -45,10 +47,18 @@
           </div>
         </div>
       </nav>
-
-
+      <button class="btn" type="button" id="random-number-button">Click Me</button>
       <div class="container">
-        <div class="col-md-4">
+        <div id="display-recipe-group-left" class="col-md-4">
+        <div class="display-clickable-recipe">
+          <ul>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2">
+      </div>
+      <div id="display-recipe-group" class="col-md-6">
         <div class="display-recipe-info">
           <h2></h2>
           <p>Recipe Ingredients:</p>
@@ -58,15 +68,8 @@
           <p>Recipe Instructions: <span class="display-recipe-instructions"></span></p>
           <div class="display-image"></div>
         </div>
-
-        <div class="display-clickable-recipe">
-          <ul>
-
-          </ul>
-        </div>
         <br>
-        <button class="btn" type="button" id="random-number-button">Click Me</button>
-        </div>
       </div>
+    </div>
   </body>
 </html>
