@@ -182,7 +182,7 @@ $(document).ready(function(){
         newRecipeBook.recipes.forEach(function(recipe){
           var recipeType = recipe.type;
           if (recipeType === alcoholName) {
-          $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
+          $(".display-clickable-recipe").append("<p class=clickable-recipe-name>" + recipe.name + "</p>" );
           }
 //--------------Click function that displays drink recipe info for the liquor tree
           $(".clickable-recipe-name").last().click(function(){

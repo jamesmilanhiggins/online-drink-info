@@ -1,9 +1,20 @@
 body {
   color: white;
 }
-.display-clickable-recipe li {
-  list-style: none;
-  display: inline-block;
+.row {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.display-recipe-info {
+  margin-right: 60px;
+}
+.display-clickable-recipe{
+  text-align: center;
+}
+.display-clickable-recipe p {
+  text-align: center;
+  display: inline;
+  margin-left: 30px;
 }
 .background-image img {
   width: 100%;
