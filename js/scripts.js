@@ -227,7 +227,7 @@ $(document).ready(function(){
     // $("#display-recipe-group").toggleClass("slide-out");
     $(".speech").text("I'll Never Get Tired Of Pouring These Bad Boys!");
     $(".display-clickable-recipe").empty();
-    var randomNumber = Math.floor(Math.random() *15 + 1);
+    var randomNumber = Math.floor(Math.random() *25 + 1);
     newRecipeBook.recipes.forEach(function(recipe){
       var recipeValue = recipe.value;
       if (randomNumber === recipeValue) {
