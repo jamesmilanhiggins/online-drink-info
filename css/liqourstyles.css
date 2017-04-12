@@ -27,6 +27,7 @@ body {
   text-align: center;
 }
 .display-clickable-recipe p {
+  cursor: pointer;
   text-align: center;
   display: inline;
   margin-left: 30px;
@@ -72,13 +73,14 @@ body {
   height: 400px;
 }
 .alcoholBottle {
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 2s;
-    height: 300px;
-    width: auto;
-    padding-left: 100px;
-    padding-right: 100px;
-    vertical-align: top;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 2s;
+  height: 300px;
+  width: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  vertical-align: top;
 }
 .container {
 margin-top: 75px;

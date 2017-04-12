@@ -150,31 +150,30 @@ $(document).ready(function(){
   $("#main-section").show();
   });
 
-//---------- click function for random drink that adds a clickable drink name
+
+//---------------- click function that generates a random recipe and displays the recipe details
   $("#random-number-button").click(function(){
-    $(".display-clickable-recipe").empty();
-    var randomNumber = Math.floor(Math.random() *15 + 1)
-    console.log(randomNumber);
-    newRecipeBook.recipes.forEach(function(recipe){
-    var recipeValue = recipe.value;
-    if (randomNumber === recipeValue) {
-      $(".display-clickable-recipe").append("<li class=clickable-recipe-name>" + recipe.name + "</li>");
-//---------------- click funciton that shows recipe details based off clickable drink name for drink randomizer
-      $(".clickable-recipe-name").last().click(function(){
-        $(".display-image").empty().append("<img src=" + recipe.img + ">");
-        $(".display-recipe-instructions").empty();
-        $("#display-ingredients").empty();
-        $(".display-recipe-info h2").empty();
-        $(".display-clickable-recipe").text("");
-        $(".display-recipe-info h2").append(recipe.name);
-        recipe.ingredients.forEach(function(ingredient){
-          $("#display-ingredients").append("<li>" + ingredient + "</li>")
-          });
-        $(".display-recipe-instructions").append(recipe.instructions);
+
+        $(".display-clickable-recipe").empty();
+        var randomNumber = Math.floor(Math.random() *15 + 1)
+        console.log(randomNumber);
+        newRecipeBook.recipes.forEach(function(recipe){
+          var recipeValue = recipe.value;
+          if (randomNumber === recipeValue) {
+            $(".display-image").empty().append("<img src=" + recipe.img + ">");
+            $(".display-recipe-instructions").empty();
+            $("#display-ingredients").empty();
+            $(".display-recipe-info h2").empty();
+            $(".display-clickable-recipe").text("");
+            $(".display-recipe-info h2").append(recipe.name);
+            recipe.ingredients.forEach(function(ingredient){
+              $("#display-ingredients").append("<li>" + ingredient + "</li>")
+            });
+            $(".display-recipe-instructions").append(recipe.instructions);
+          };
         });
-        };
-    });
-  });
+      });
+
 
 //-------------LIQUOR TREE----------------------------
 //-------------- Click function for liquor tree that sets a variable equal to the type of alcohol that the image represents and builds clickable drink names based off the type of alcohol that the user chooses.
@@ -202,8 +201,7 @@ $(document).ready(function(){
             });
           });
 
-    // $(".display-recipe-info").click(function(){
-    //   $(".display-recipe-info").toggleClass("slide-out");
-    // });
+// $("#display-recipe-group").removeClass("slide-out");
+
 
 });
