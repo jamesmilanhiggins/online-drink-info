@@ -1,4 +1,11 @@
-
+#notTwentyOne {
+  font-size: 100px;
+  /*padding-top: 50%;*/
+  margin-top: 25%;
+  text-align: center;
+  color: white;
+  background-color: red;
+}
 #confirm-age-section {
   background-image: url(../img/bar.jpg);
   display: block;
@@ -6,6 +13,7 @@
   height: 100%;
   background-size: cover;
   position: fixed;
+
 }
 #confirm-age-section a {
   border-radius: 10px;
@@ -62,6 +70,7 @@
   border: 3px solid white;
   z-index: 7;
   color: white;
+  background-color: rgba(70, 70, 70, 0.8);
 }
 
 .alcoholBottle:hover {
@@ -104,4 +113,9 @@ height:600px;
 .container h2 {
   text-align: center;
   font-family: 'Satisfy', cursive;
+}
+
+.navbar-header {
+padding-left: 30%;
+font-family: 'BioRhyme';
 }
