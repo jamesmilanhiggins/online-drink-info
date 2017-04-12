@@ -1,0 +1,58 @@
+body {
+  color: white;
+}
+#random-number-button {
+  background-color: rgba(70, 70, 70, 0.6);
+  color: white;
+  border-color: white;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 10px;
+  margin-right: 20%
+  text-align: center;
+  font-size: 30px;
+}
+ p {
+   font-size: 18px;
+ }
+.display-clickable-recipe li{
+  color: white;
+  text-decoration: underline;
+  text-decoration-color:#11B5E4;
+  text-align: center;
+  font-size: 40px;
+}
+.display-clickable-recipe li:hover{
+  color: white;
+
+  font-size: 50px;
+}
+
+#random-number-button:hover {
+    background-color: rgba(75, 75, 75, 0.6);
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%
+    margin-top: 10px;
+    font-size: 32px;
+}
+
+#display-recipe-group-left {
+  list-style:none;
+  text-align: center;
+
+}
+#display-recipe-group {
+  background-color: rgba(70, 70, 70, 0.6);
+  /*opacity: .8;*/
+  border-radius: 10px;
+  border:1px solid white;
+}
+.display-image {
+  /*margin:auto;*/
+  text-align: center;
+}
+img {
+  height:500px;
+  width:auto;
+}

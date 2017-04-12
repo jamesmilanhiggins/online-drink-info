@@ -115,7 +115,7 @@ paloma.type = "Tequila";
 
 var bloodyMaria = new Recipe ("Bloody Maria" , "instructions");
 bloodyMaria.ingredients.push("kosher salt", "Juice of 2 limes", "2 oz. tequila", "5 oz. tomato juice", "2 dashes Worcestershire sauce", "2 dashes Tabasco sauce", "2 tsp. horseradish", "Freshly ground black pepper", "1 celery stalk", "1 strip cooked bacon", "1 dill pickle spear", "Baby dill pickles", "Pickled jalapeños");
-bloodyMaria.instructions = "Place salt in a small, shallow dish. In a separate small, shallow dish, add lime juice. Dip the rim of the glass into lime juice, then in salt. Set glass aside. Add tequila, tomato juice, lime juice, Worcestershire, Tabasco, and horseradish to glass, then stir to combine. Season with salt and pepper. Garnish with celery, bacon, pickles, and jalapeños.";
+bloodyMaria.instructions = "Place salt in a small, shallow dish. In a separate small, shallow dish, add lime juice. Dip the rim of the glass into lime juice, then in salt. Set glass aside. Add tequila, tomato juice, lime juice, Worcestershire, Tabasco, and horseradish to glass, then stir to combine. Season with salt and pepper. Garnish with celery, bacon, pickles, and jalapenos.";
 bloodyMaria.value = 14;
 bloodyMaria.img = "img/tequila/bloody-maria.png";
 bloodyMaria.type = "Tequila";
