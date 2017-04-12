@@ -127,10 +127,80 @@ tequilaSunrise.value = 15;
 tequilaSunrise.img = "img/tequila/tequila-sunrise.png";
 tequilaSunrise.type = "Tequila";
 
+var gimlet = new Recipe ("Gimlet" , "instructions");
+gimlet.ingredients.push("4 cubes ice", "1 tablespoon fresh lime juice", "2 fluid ounces gin", "1 lime wedge", "4 fluid ounces tonic water");
+gimlet.instructions = "Place the ice cubes in a tall, narrow glass with the ice coming near the top. Pour gin, tonic water, and lime juice over the ice. Stir well with a long-necked spoon. Garnish with lime wedge, and serve immediately.";
+gimlet.value = 16;
+gimlet.img = "img/gin/gimlet.png";
+gimlet.type = "Gin";
+
+var ginMartini = new Recipe ("Gin Martini" , "instructions");
+ginMartini.ingredients.push("Ice cubes", "2 (1.5 fluid ounce) jiggers dry gin", "1 drop anise flavored liqueur, such as Sambucca®", "1 pitted green olive", "1/4 (1.5 fluid ounce) jigger dry vermouth");
+ginMartini.instructions = "Fill a martini pitcher with ice. Pour in the gin, vermouth and anise liqueur. Stir or shake until extremely cold. Strain into a chilled martini glass. Garnish with an olive.";
+ginMartini.value = 17;
+ginMartini.img = "img/gin/gin-martini.png";
+ginMartini.type = "Gin";
+
+var tomCollins = new Recipe ("Tom Collins" , "instructions");
+tomCollins.ingredients.push("2 fluid ounces gin", "1 cup ice cubes", "1/4 cup cold club soda", "2 fluid ounces lemon juice", "1 slice lemon, for garnish", "1 fluid ounce simple syrup", "1 dash bitters", "1 maraschino cherry");
+tomCollins.instructions = "Fill a cocktail shaker with ice. Pour in the gin, lemon juice, simple syrup and a dash of bitters. Cover and shake until the outside of the container is frosty, about 15 seconds. Strain into a highball glass full of ice. Top off with club soda and garnish with a lemon slice and maraschino cherry.";
+tomCollins.value = 18;
+tomCollins.img = "img/gin/tom-collins.png";
+tomCollins.type = "Gin";
+
+var ginTonic = new Recipe ("Gin Tonic" , "instructions");
+ginTonic.ingredients.push("4 cubes ice", "1 tablespoon fresh lime juice", "1 lime wedge", "4 fluid ounces tonic water");
+ginTonic.instructions = "Place the ice cubes in a tall, narrow glass with the ice coming near the top. Pour gin, tonic water, and lime juice over the ice. Stir well with a long-necked spoon. Garnish with lime wedge, and serve immediately.";
+ginTonic.value = 19;
+ginTonic.img = "img/gin/gin-tonic.png";
+ginTonic.type = "Gin";
+
+var negroni = new Recipe ("Negroni" , "instructions");
+negroni.ingredients.push("3/4 fluid ounce campari", "2 fluid ounces carbonated water", "3/4 fluid ounce gin", "3/4 fluid ounce sweet vermouth", "1 wedge lemon, for garnish");
+negroni.instructions = "In a rocks glass over ice, combine campari, gin, sweet vermouth. Fill with carbonated water and garnish with a wedge of lemon.";
+negroni.value = 20;
+negroni.img = "img/gin/negroni.png";
+negroni.type = "Gin";
+
+var daiquiri = new Recipe ("Daiquiri" , "instructions");
+daiquiri.ingredients.push("1 (6 ounce) can frozen lemonade concentrate", "1/2 (10 ounce) package frozen sliced strawberries", "6 fluid ounces chilled lemon-lime soda", "2 cups ice cubes", "6 fluid ounces light rum");
+daiquiri.instructions = "In the container of a blender, combine the lemonade concentrate, lemon-lime soda, rum and strawberries. Cover, and blend until smooth. Add ice and blend to desired thickness.";
+daiquiri.value = 21;
+daiquiri.img = "img/rum/daiquiri.png";
+daiquiri.type = "Rum";
+
+var hurricane = new Recipe ("Hurricane" , "instructions");
+hurricane.ingredients.push("1 cup ice cube", "1 fluid ounce Chambord (raspberry liqueur)", "1 fluid ounce light rum", "1 fluid ounce triple sec liqueur", "1 fluid ounce dark rum", "3 fluid ounces orange juice", "1 fluid ounce coconut rum", "1 fluid ounce vodka", "1 fluid ounce gin", "orange slices for garnish (optional)", "maraschino cherry for garnish (optional)");
+hurricane.instructions = "Fill a hurricane glass with ice. Add light rum, dark rum, coconut rum, vodka, gin, raspberry liqueur, triple sec and orange juice. Shake gently, and garnish with orange slices and a cherry, if desired. Beverage will be about the color of a pink grapefruit.";
+hurricane.value = 22;
+hurricane.img = "img/rum/hurricane.png";
+hurricane.type = "Rum";
+
+var maiTai = new Recipe ("Mai Tai" , "instructions");
+maiTai.ingredients.push("1 (1.5 fluid ounce) jigger spiced rum", "3 fluid ounces pineapple juice", "1/2 (1.5 fluid ounce) jigger coconut-flavored rum", "2 fluid ounces orange juice", "1 teaspoon grenadine syrup", "1 cup ice cubes");
+maiTai.instructions = "In a cocktail mixer full of ice, combine the spiced rum, coconut rum, grenadine, pineapple juice and orange juice. Shake vigorously and strain into glass full of ice.";
+maiTai.value = 23;
+maiTai.img = "img/rum/mai-tai.png";
+maiTai.type = "Rum";
+
+var mojito = new Recipe ("Mojito" , "instructions");
+mojito.ingredients.push("1/2 teaspoon confectioners' sugar", "2 fluid ounces white rum", "1/2 lime, juiced", "4 fluid ounces carbonated water", "1 sprig fresh mint, crushed", "1/2 cup crushed ice", "1 sprig fresh mint, garnish");
+mojito.instructions = "In a highball glass, stir together the confectioners' sugar and lime juice. Bruise the mint leaves and drop into glass. Fill glass with crushed ice and pour in rum. Pour in carbonated water to fill the glass. Garnish with a sprig of mint.";
+mojito.value = 24;
+mojito.img = "img/rum/mojito.png";
+mojito.type = "Rum";
+
+var pinaColada = new Recipe ("Pina Colada" , "instructions");
+pinaColada.ingredients.push("1 fluid ounce light rum", "2 fluid ounces cream of coconut", "1 fluid ounce half-and-half cream", "1 fluid ounce amber rum", "ice cubes, as needed", "3 fluid ounces pineapple juice", "1/4 fluid ounce dark rum (optional)", "2 fluid ounces sweet and sour mix" );
+pinaColada.instructions = "Pour the light rum, amber rum, pineapple juice, sweet and sour mix, cream of coconut, and half-and-half cream into the pitcher of a blender with ice; blend until the cocktail has a slushy texture. Pour the slushy mixture into a glass.";
+pinaColada.value = 25;
+pinaColada.img = "img/rum/pina-colada.png";
+pinaColada.type = "Rum";
+
 // var dummy = new Recipe("dummy")
 
 var newRecipeBook = new RecipeBook ();
-newRecipeBook.recipes.push(mule, bloodyMary, screwDriver, vodkaMartini, cosmo, hotToddy, oldFashioned, irishCoffee, whiskeyCoke, margarita, longIsland, paloma, bloodyMaria, tequilaSunrise, whiskeySour);
+newRecipeBook.recipes.push(mule, bloodyMary, screwDriver, vodkaMartini, cosmo, hotToddy, oldFashioned, irishCoffee, whiskeyCoke, margarita, longIsland, paloma, bloodyMaria, tequilaSunrise, whiskeySour, gimlet, ginMartini, tomCollins, ginTonic, negroni, daiquiri, hurricane, maiTai, mojito, pinaColada );
 
 //---------method to list each ingredient within the recipe
 Recipe.prototype.displayIngredients = function () {
