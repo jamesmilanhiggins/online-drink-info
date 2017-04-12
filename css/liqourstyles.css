@@ -35,10 +35,10 @@ body {
   display: inline;
   margin-left: 30px;
 }
-.clickable-recipe-name:hover {
+/*.clickable-recipe-name:hover {
   transition: 1s;
   font-size: 40px;
-}
+}*/
 .clickable-recipe-name {
   font-size: 30px;
   -webkit-text-stroke-width: 1px;
@@ -194,5 +194,105 @@ height:500px;
   100% {
     opacity:0;
     -ms-transform:  translate(-1000px,0px)  ;
+  }
+}
+
+.angrytext {
+
+ -webkit-animation: shake 6s linear 1s infinite normal ;
+ animation: shake 6s linear 1s infinite normal ;
+}
+
+@-webkit-keyframes shake {
+  0%{
+	transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+  }
+  2%{
+	transform: rotate(15deg);
+	-webkit-transform: rotate(15deg);
+  }
+  4%{
+	transform: rotate(-18deg);
+	-webkit-transform: rotate(-18deg);
+  }
+  6%{
+	transform: rotate(18deg);
+	-webkit-transform: rotate(18deg);
+  }
+  8%{
+	transform: rotate(-22deg);
+	-webkit-transform: rotate(-22deg);
+  }
+  10%{
+	transform: rotate(22deg);
+	-webkit-transform: rotate(22deg);
+  }
+  12%{
+	transform: rotate(-18deg);
+	-webkit-transform: rotate(-18deg);
+  }
+  14%{
+	transform: rotate(18deg);
+	-webkit-transform: rotate(18deg);
+  }
+  16%{
+	transform: rotate(-12deg);
+	-webkit-transform: rotate(-12deg);
+  }
+  18%{
+	transform: rotate(-12deg);
+	-webkit-transform: rotate(-12deg);
+  }
+  20%{
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes shake {
+  0%{
+	transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+  }
+  2%{
+	transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+  }
+  4%{
+	transform: rotate(-18deg);
+	-ms-transform: rotate(-18deg);
+  }
+  6%{
+	transform: rotate(18deg);
+	-ms-transform: rotate(18deg);
+  }
+  8%{
+	transform: rotate(-22deg);
+	-ms-transform: rotate(-22deg);
+  }
+  10%{
+	transform: rotate(22deg);
+	-ms-transform: rotate(22deg);
+  }
+  12%{
+	transform: rotate(-18deg);
+	-ms-transform: rotate(-18deg);
+  }
+  14%{
+	transform: rotate(18deg);
+	-ms-transform: rotate(-18deg);
+  }
+  16%{
+	transform: rotate(-12deg);
+	-ms-transform: rotate(-12deg);
+  }
+  18%{
+	transform: rotate(-12deg);
+	-ms-transform: rotate(-12deg);
+  }
+  20%{
+	transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
   }
 }

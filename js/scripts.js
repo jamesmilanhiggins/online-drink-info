@@ -143,6 +143,7 @@ Recipe.prototype.displayIngredients = function () {
 
 //---------------- Front End Logic
 $(document).ready(function(){
+  $(".alcoholBottle").addClass("angrytext")
 //--------------- click function to confirm users age
   $("button[name=old-enough-button]").click(function(){
   $("#confirm-age-section").hide();
