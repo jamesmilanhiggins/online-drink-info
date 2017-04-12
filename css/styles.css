@@ -34,6 +34,7 @@
   height: 100%;
   position: fixed;
   background-size: cover;
+  background-position: center;
   z-index: -2;
   background-color: rgba(0, 0, 0, 4);
 }

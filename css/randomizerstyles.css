@@ -23,31 +23,44 @@ body {
   color: white;
 }
 .speech{
-  font-family: 'Raleway';
+font-family: 'Raleway';
 color: white;
-margin-top: 11%;
-margin-left: 66%;
+margin-top: 3%;
+margin-left: 61%;
 position: relative;
 width: 225px;
 height: 140px;
 padding: 20px;
 background: rgba(0, 0, 0, 0.8);
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
+-webkit-border-radius: 57px;
+-moz-border-radius: 57px;
+border-radius: 57px;
+border: white solid 2px;
 }
 
 .speech:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 94px 16px 0;
+  border-color: black transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -94px;
+  left: 72px;
+}
+.speech:before {
 content: '';
 position: absolute;
 border-style: solid;
-border-width: 26px 20px 0;
-border-color: black transparent;
+border-width: 95px 17px 0;
+border-color: white transparent;
 display: block;
 width: 0;
-z-index: 1;
-bottom: -26px;
-left: 34px;
+z-index: 0;
+bottom: -97px;
+left: 71px;
 }
 
 
