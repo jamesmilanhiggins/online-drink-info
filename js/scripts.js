@@ -152,8 +152,10 @@ $(document).ready(function(){
 
   //--------------------DRINK RANDOMIZER------------------
 //---------------- click function that generates a random recipe and displays the recipe details
-  $("#random-number-button").click(function(){
+  $("#click-bartender").click(function(){
     $("#display-recipe-group").show();
+    // $("#display-recipe-group").toggleClass("slide-out");
+    $(".speech").text("I'll Never Get Tired Of Pouring These Bad Boys!");
     $(".display-clickable-recipe").empty();
     var randomNumber = Math.floor(Math.random() *15 + 1);
     newRecipeBook.recipes.forEach(function(recipe){
@@ -170,8 +172,10 @@ $(document).ready(function(){
         });
         $(".display-recipe-instructions").append(recipe.instructions);
       };
-    });
+      });
+
   });
+
 
 
 //-------------LIQUOR TREE----------------------------
@@ -201,7 +205,7 @@ $(document).ready(function(){
             });
           });
 
-// $("#display-recipe-group").removeClass("slide-out");
+
 
 
 });

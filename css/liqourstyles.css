@@ -90,7 +90,7 @@ margin-top: 75px;
 height:500px;
 }
 .container h2 {
-  text-shadow: 4px 4px 8px black;
+  text-shadow: 2px 2px 4px rgb(0, 198, 255);;
   font-family: 'Kavoon';
   font-size: 60px;
 }
