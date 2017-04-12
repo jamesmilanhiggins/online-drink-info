@@ -127,8 +127,10 @@ tequilaSunrise.value = 15;
 tequilaSunrise.img = "img/tequila/tequila-sunrise.png";
 tequilaSunrise.type = "Tequila";
 
+// var dummy = new Recipe("dummy")
+
 var newRecipeBook = new RecipeBook ();
-newRecipeBook.recipes.push(mule, bloodyMary, screwDriver, vodkaMartini, cosmo, hotToddy, oldFashioned, irishCoffee, whiskeyCoke, whiskeySour, margarita, longIsland, paloma, bloodyMaria, tequilaSunrise);
+newRecipeBook.recipes.push(mule, bloodyMary, screwDriver, vodkaMartini, cosmo, hotToddy, oldFashioned, irishCoffee, whiskeyCoke, margarita, longIsland, paloma, bloodyMaria, tequilaSunrise, whiskeySour);
 
 //---------method to list each ingredient within the recipe
 Recipe.prototype.displayIngredients = function () {
@@ -183,7 +185,7 @@ $(document).ready(function(){
           var recipeType = recipe.type;
           if (recipeType === alcoholName) {
           $(".display-clickable-recipe").append("<p class=clickable-recipe-name>" + recipe.name + "</p>" );
-          }
+        } else {return;}
 //--------------Click function that displays drink recipe info for the liquor tree
           $(".clickable-recipe-name").last().click(function(){
                 $(".display-image").empty().append("<img src=" + recipe.img + ">");
