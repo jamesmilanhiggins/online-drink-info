@@ -1,3 +1,7 @@
+.display-image img {
+  width: auto;
+  height: 600px;;
+}
 body {
   color: white;
 }
@@ -6,15 +10,34 @@ body {
   margin-right: 20%;
 }
 .display-recipe-info {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  font-family: 'Raleway';
   margin-right: 60px;
 }
 .display-clickable-recipe{
+  margin-top: 10px;
   text-align: center;
 }
 .display-clickable-recipe p {
   text-align: center;
   display: inline;
   margin-left: 30px;
+}
+.clickable-recipe-name:hover {
+  transition: 1s;
+  font-size: 40px;
+}
+.clickable-recipe-name {
+  font-size: 30px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-family: 'Permanent Marker';
+  color: rgba(0, 198, 255, 1);
+  text-shadow: 1px 1px 4px black;
 }
 .background-image img {
   width: 100%;
@@ -24,6 +47,7 @@ body {
   z-index: -2;
   background-color: rgba(0, 0, 0, 4);
 }
+
 .overlay {
   transition: 3s;
   height: 100%;
@@ -51,6 +75,14 @@ body {
     padding-left: 100px;
     padding-right: 100px;
     vertical-align: top;
+}
+.container {
+margin-top: 75px;
+height:500px;
+}
+.container h2 {
+  font-family: 'Kavoon';
+  font-size: 60px;
 }
 #containertest:hover > .alcoholBottle:not(:hover) {
     opacity: 0.3;
