@@ -27,7 +27,7 @@ This site first asks the user if they are of age to view the age restricted cont
 ## Setup/Installation Requirements
 
 * _Clone from gitHub repository_
-* _navigate into cloned directory folder_
+* _Navigate into cloned directory folder_
 * _Open index.html file in web browser_
 * _Navigate site_
 
