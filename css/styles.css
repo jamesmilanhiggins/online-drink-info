@@ -1,11 +1,11 @@
 #notTwentyOne {
   font-size: 100px;
-  /*padding-top: 50%;*/
   margin-top: 25%;
   text-align: center;
   color: white;
   background-color: red;
 }
+
 #confirm-age-section {
   background-image: url(../img/bar.jpg);
   display: block;
@@ -13,8 +13,8 @@
   height: 100%;
   background-size: cover;
   position: fixed;
-
 }
+
 #confirm-age-section a {
   border-radius: 10px;
   font-size: 20px;
@@ -22,9 +22,9 @@
   color: white;
   background-color: rgba(0, 0, 0, 0);
   padding: 15px;
-  margin-top: 10%;
-  margin: 20px;
+  margin-top: 20%;
 }
+
 #confirm-age-section a:hover {
   color: rgba(0, 198, 255, 1);
   text-shadow: 1px 1px 4px black;
@@ -39,6 +39,7 @@
   z-index: -2;
   background-color: rgba(0, 0, 0, 4);
 }
+
 .overlay {
   transition: 3s;
   height: 100%;
@@ -63,6 +64,7 @@
   border: 2px solid white;
   background-color: rgba(0, 0, 0, 0);
 }
+
 #user-age-question {
   padding: 4%;
   position: fixed;
@@ -75,34 +77,26 @@
   background-color: rgba(70, 70, 70, 0.8);
 }
 
-/*.alcoholBottle:hover {
-  height: 400px;
-}
-.alcoholBottle {
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 2s;
-    height: 300px;
-    width: auto;
-    padding-left: 100px;
-    padding-right: 100px;
-    vertical-align: top;
-}*/
 #containertest:hover > .alcoholBottle:not(:hover) {
-    opacity: 0.3;
-    transition: all 1s;
+  opacity: 0.3;
+  transition: all 1s;
 }
+
 .container {
-margin-top: 75px;
-height:600px;
+  margin-top: 75px;
+  height:600px;
 }
+
 .clickable-recipe-name:hover {
   font-size: 30px;
 }
+
 .clickable-recipe-name {
   color: rgba(0, 198, 255, 1);
   text-shadow: 1px 1px 2px black;
   font-size: 20px;
 }
+
 #random-number-button {
   background-color: rgba(0, 0, 0, 0);
   color: black;
@@ -112,6 +106,7 @@ height:600px;
 .display-recipe-info h2 {
   font-family: 'Satisfy', cursive;
 }
+
 .container h2 {
   text-align: center;
   font-family: 'Satisfy', cursive;
