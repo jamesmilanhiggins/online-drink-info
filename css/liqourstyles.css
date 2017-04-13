@@ -5,6 +5,16 @@
 body {
   color: white;
 }
+.rotate:hover {
+  transition: 2s;
+  -webkit-transform: rotateZ(30deg);
+  -ms-transform: rotateZ(30deg);
+  transform: rotateZ(30deg);
+}
+.recipe-bold {
+  font-weight: 900;
+  font-size: 25px;
+}
 .row {
   margin-left: 20%;
   margin-right: 20%;

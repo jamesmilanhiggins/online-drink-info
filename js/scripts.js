@@ -9,7 +9,6 @@ function Recipe(name,ingredients,instructions, value, img, type) {
   this.name = name;
   this.ingredients = [];
   this.instructions = instructions;
-  this.type = type;
   this.value = value;
   this.img = img;
   this.type = type;
@@ -208,18 +207,17 @@ $(document).ready(function(){
     $("#main-section").show();
   });
 
-
   //--------------------DRINK RANDOMIZER------------------
   //click function that generates a random recipe and displays the recipe details
   $("#click-bartender").click(function(){
 
+    $(".speech").text("I'll Never Get Tired Of Pouring These Bad Boys!");
       $("#display-recipe-group").slideDown(1000);
-      $(".speech").text("I'll Never Get Tired Of Pouring These Bad Boys!");
       var randomNumber = Math.floor(Math.random() *25 + 1);
       newRecipeBook.recipes.forEach(function(recipe){
         var recipeValue = recipe.value;
         if (randomNumber === recipeValue) {
-          $(".display-image").empty().append("<img src=" + recipe.img + ">");
+          $(".display-image").empty().append("<img class=rotate src=" + recipe.img + ">");
           $(".display-recipe-instructions").empty();
           $("#display-ingredients").empty();
           $(".display-clickable-recipe").text("");
@@ -230,8 +228,6 @@ $(document).ready(function(){
           $(".display-recipe-instructions").append(recipe.instructions);
         };
       });
-  
-
   });
 
 
@@ -249,7 +245,7 @@ $(document).ready(function(){
           //Click function that displays drink recipe info for the liquor tree
           $(".clickable-recipe-name").last().click(function(){
             $(".display-recipe-info").show();
-                $(".display-image").empty().append("<img src=" + recipe.img + ">");
+                $(".display-image").empty().append("<img class=rotate src=" + recipe.img + ">");
                 $(".display-recipe-instructions").empty();
                 $("#display-ingredients").empty();
                 $(".display-recipe-info h2").empty();

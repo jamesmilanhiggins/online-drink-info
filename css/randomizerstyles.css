@@ -6,7 +6,16 @@
   list-style: disc;
   font-size: 20px;
 }
-
+.rotate:hover {
+  transition: 2s;
+  -webkit-transform: rotateZ(30deg);
+  -ms-transform: rotateZ(30deg);
+  transform: rotateZ(30deg);
+}
+.recipe-bold {
+  font-weight: 900;
+  font-size: 25px;
+}
 .display-recipe-info  {
   text-shadow: 2px 2px 4px black;
   font-size: 20px;
