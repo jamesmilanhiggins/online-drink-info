@@ -22,7 +22,8 @@
   color: white;
   background-color: rgba(0, 0, 0, 0);
   padding: 15px;
-  margin-top: 20%;
+  margin-top: 10%;
+  margin: 20px;
 }
 #confirm-age-section a:hover {
   color: rgba(0, 198, 255, 1);

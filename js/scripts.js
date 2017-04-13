@@ -1,10 +1,10 @@
-//---------Back End Logic
-//--------------- Constructor for recipe book object
+//Back End Logic
+//Constructor for recipe book object
 function RecipeBook (recipes) {
   this.recipes = [];
 };
 
-//-------------- Constructor for recipe object
+//Constructor for recipe object
 function Recipe(name,ingredients,instructions, value, img, type) {
   this.name = name;
   this.ingredients = [];
@@ -15,8 +15,7 @@ function Recipe(name,ingredients,instructions, value, img, type) {
   this.type = type;
 }
 
-
-//-------------------- recipes created as objects
+//recipes created as objects
 var mule = new Recipe ("Moscow Mule", "instructions");
 mule.ingredients.push("1 1/2 oz. Vodka", "1/2 oz. fresh lime juice", "1/4oz simple syrup", "ginger beer", "lime wedges for garnish");
 mule.instructions = "Lightly shake vodka, lime juice, and simple syrup. Add ginger beer and shake. Serve in a copper mug and garnish with lime wedge."
@@ -197,60 +196,48 @@ pinaColada.value = 25;
 pinaColada.img = "img/rum/pina-colada.png";
 pinaColada.type = "Rum";
 
-// var dummy = new Recipe("dummy")
-
 var newRecipeBook = new RecipeBook ();
 newRecipeBook.recipes.push(mule, bloodyMary, screwDriver, vodkaMartini, cosmo, hotToddy, oldFashioned, irishCoffee, whiskeyCoke, margarita, longIsland, paloma, bloodyMaria, tequilaSunrise, whiskeySour, gimlet, ginMartini, tomCollins, ginTonic, negroni, daiquiri, hurricane, maiTai, mojito, pinaColada );
 
-//---------method to list each ingredient within the recipe
-Recipe.prototype.displayIngredients = function () {
-  this.ingredients.forEach(function(ingredient) {
-    var ingredientList = "";
-    ingredientList += ingredient;
-    console.log(ingredientList);
-  });
-};
-
-//---------------- Front End Logic
+//Front End Logic
 $(document).ready(function(){
   $(".alcoholBottle").addClass("angrytext")
-//--------------- click function to confirm users age
+  //click function to confirm users age
   $("button[name=old-enough-button]").click(function(){
-  $("#confirm-age-section").hide();
-  $("#main-section").show();
+    $("#confirm-age-section").hide();
+    $("#main-section").show();
   });
 
 
   //--------------------DRINK RANDOMIZER------------------
-//---------------- click function that generates a random recipe and displays the recipe details
+  //click function that generates a random recipe and displays the recipe details
   $("#click-bartender").click(function(){
-    $("#display-recipe-group").show();
-    // $("#display-recipe-group").toggleClass("slide-out");
-    $(".speech").text("I'll Never Get Tired Of Pouring These Bad Boys!");
-    $(".display-clickable-recipe").empty();
-    var randomNumber = Math.floor(Math.random() *25 + 1);
-    newRecipeBook.recipes.forEach(function(recipe){
-      var recipeValue = recipe.value;
-      if (randomNumber === recipeValue) {
-        $(".display-image").empty().append("<img src=" + recipe.img + ">");
-        $(".display-recipe-instructions").empty();
-        $("#display-ingredients").empty();
-        $(".display-recipe-info h2").empty();
-        $(".display-clickable-recipe").text("");
-        $(".display-recipe-info h2").append(recipe.name);
-        recipe.ingredients.forEach(function(ingredient){
-          $("#display-ingredients").append("<li>" + ingredient + "</li>")
-        });
-        $(".display-recipe-instructions").append(recipe.instructions);
-      };
+
+      $("#display-recipe-group").slideDown(1000);
+      $(".speech").text("I'll Never Get Tired Of Pouring These Bad Boys!");
+      var randomNumber = Math.floor(Math.random() *25 + 1);
+      newRecipeBook.recipes.forEach(function(recipe){
+        var recipeValue = recipe.value;
+        if (randomNumber === recipeValue) {
+          $(".display-image").empty().append("<img src=" + recipe.img + ">");
+          $(".display-recipe-instructions").empty();
+          $("#display-ingredients").empty();
+          $(".display-clickable-recipe").text("");
+          $(".display-recipe-info h2").empty().append(recipe.name);
+          recipe.ingredients.forEach(function(ingredient){
+            $("#display-ingredients").append("<li>" + ingredient + "</li>")
+          });
+          $(".display-recipe-instructions").append(recipe.instructions);
+        };
       });
+  
 
   });
 
 
 
 //-------------LIQUOR TREE----------------------------
-//-------------- Click function for liquor tree that sets a variable equal to the type of alcohol that the image represents and builds clickable drink names based off the type of alcohol that the user chooses.
+      //Click function for liquor tree that sets a variable equal to the type of alcohol that the image represents and builds clickable drink names based off the type of alcohol that the user chooses.
       $(".alcoholBottle").click(function() {
         $(".display-clickable-recipe").text("");
         var alcoholName = $(this).attr("alt");
@@ -259,14 +246,14 @@ $(document).ready(function(){
           if (recipeType === alcoholName) {
           $(".display-clickable-recipe").append("<p class=clickable-recipe-name>" + recipe.name + "</p>" );
         } else {return;}
-//--------------Click function that displays drink recipe info for the liquor tree
+          //Click function that displays drink recipe info for the liquor tree
           $(".clickable-recipe-name").last().click(function(){
             $(".display-recipe-info").show();
                 $(".display-image").empty().append("<img src=" + recipe.img + ">");
                 $(".display-recipe-instructions").empty();
                 $("#display-ingredients").empty();
                 $(".display-recipe-info h2").empty();
-                $(".display-recipe-info h2").append(recipe.name);
+                $(".display-recipe-info h2").empty().append(recipe.name);
                 recipe.ingredients.forEach(function(ingredient){
                   $("#display-ingredients").append("<li>" + ingredient + "</li>")
                   });
