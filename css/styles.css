@@ -43,7 +43,7 @@
   transition: 3s;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   position: fixed;
   left: 0;
   z-index: -1;
@@ -75,7 +75,7 @@
   background-color: rgba(70, 70, 70, 0.8);
 }
 
-.alcoholBottle:hover {
+/*.alcoholBottle:hover {
   height: 400px;
 }
 .alcoholBottle {
@@ -86,7 +86,7 @@
     padding-left: 100px;
     padding-right: 100px;
     vertical-align: top;
-}
+}*/
 #containertest:hover > .alcoholBottle:not(:hover) {
     opacity: 0.3;
     transition: all 1s;

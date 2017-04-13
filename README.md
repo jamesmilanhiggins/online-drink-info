@@ -1,13 +1,16 @@
 
 # _Virtual Bartender_
 
-#### _This app will recommend drink recipes based off what the user has in their fridge, a drink recipe randomizer, and a drink suggester based of the users chosen alcohol, {2017}_
+#### _This app will display a random drink and show drinks based on alcohol type chosen by user. {2017}_
 
-#### By _**{List of contributors}**_
+#### By _**{Contributors}**_
+* _James Higgins_
+* _Jason Ainsworth_
+* _Nick Powell_
+* _Marko Ludlow_
 
 ## Description
-
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+This site first asks the user if they are of age to view the age restricted content. Once in the site, users can choose to "go to the bar" and have a random drink displayed to them by the virtual bartender. They are also able to navigate to a liquor tree style drink menu with descriptions of each drink available at the bar.
 
 ## Project Specs:
 | Behavior |  Input   |  Output  |
@@ -20,38 +23,36 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 | The program displays 3 different liquors to the user as clickable images | *select* vodka, whiskey, tequila | *display* selected recipe |
 | The program will displays option based on the users selected image | *select* vodka | *display* vodka drink option as a clickable option |
 | The program will display recipe for user when they click the name of the drink option  | *select* "Bloody Mary" | *display* Bloody Mary recipe |
-<!-- | The program will allow allow the user to select from a dropdown of the 10 most common alcohols | *display* "vodka, whiskey, tequila, rum, scotch, gin" | *select* vodka |
-| The program will allow the user to select the ingredients that they have from a drop down list | *select* lemons, limes, coke, sprite | *display* coke | -->
-
-
-
-
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* _Clone from gitHub repository_
+* _Navigate into cloned directory folder_
+* _Open index.html file in web browser_
+* _Navigate site_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_Page has overlap issues if minimized too small. No other issues known at this time._
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_Please comment on gitHub or email Marko after 10pm on his cell phone._
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_This site was built using:_
+* _JavaScript_
+* _HTML_
+* _CSS_
+* _JQuery_
+* _Bootstrap_
+* _Atom text editor_
+
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*This site is licensed under MIT*
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2017 _{James Higgins, Jason Ainsworth, Nick Powell, Marko Ludlow}_
 >>>>>>> MLJA
