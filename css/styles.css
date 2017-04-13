@@ -74,7 +74,7 @@
   background-color: rgba(70, 70, 70, 0.8);
 }
 
-.alcoholBottle:hover {
+/*.alcoholBottle:hover {
   height: 400px;
 }
 .alcoholBottle {
@@ -85,7 +85,7 @@
     padding-left: 100px;
     padding-right: 100px;
     vertical-align: top;
-}
+}*/
 #containertest:hover > .alcoholBottle:not(:hover) {
     opacity: 0.3;
     transition: all 1s;
