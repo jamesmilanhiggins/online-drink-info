@@ -44,8 +44,8 @@ color: white;
 margin-top: 3%;
 margin-left: 61%;
 position: relative;
-width: 225px;
-height: 140px;
+width: 250px;
+height: 170px;
 padding: 20px;
 background: rgba(0, 0, 0, 0.8);
 -webkit-border-radius: 57px;
@@ -131,7 +131,7 @@ p {
 }
 
 #display-recipe-group {
-  margin-top: 7%;
+  margin-top: 3%;
   margin-left: 7%;
   width: 40%;
   display: none;

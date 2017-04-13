@@ -2,7 +2,7 @@
 //Constructor for recipe book object
 function RecipeBook (recipes) {
   this.recipes = [];
-};
+}
 
 //Constructor for recipe object
 function Recipe(name,ingredients,instructions, value, img, type) {
@@ -13,6 +13,14 @@ function Recipe(name,ingredients,instructions, value, img, type) {
   this.img = img;
   this.type = type;
 }
+//constructor for bartender object
+function Bartender (jokes) {
+  this.jokes = [];
+}
+//bartender created as an object and pushing all his jokes into the jokes array
+var mike = new Bartender ();
+mike.jokes.push("Sometimes you run into people who change your life for the better - those people are called bartenders", "Get drunk and tip the bartender", "Exercise makes you look better naked. So does Tequila. Your choice", "The customer is always right.....and the bartender decides who is still the customer", "I have mixed drinks about feelings", "Alcohol is a perfect solvent: It dissolves marriages, families and careers", "My girlfriend told me to go out and get something that makes her look sexy... so I got drunk", "Why is there so much blood in my alcohol system?", "I plan to donate my liver to an alcoholic so i'll know it's a match", "A camel can work 10 days without drinking, I can drink 10 days without working", "I'm not an alcoholic. Alcoholics need a drink, but I already have one", "I know my limits: if I fell down it means enough", "All the problems fade before a hangover", "The speed of light is when you take out a bottle of beer out of the fridge before the light comes on", "Here's $10. Drink until I am really good looking, then come and talk to me", "Heading out for drinks, bail money's on top of the fridge", "One day I shall solve my problems with maturity. Today, however, it will be alcohol", "A doctor tells a woman she can no longer touch anything alcoholic. So she gets a divorce", "In principle, I can stop drinking, the thing is: I don't have such a principle", "I am on a whiskey diet. I've lost three days already", "Wine improves with age. I improve with wine", "It's better to be a worldwide alcoholic, than an Alcoholic Anonymous", "I got drunk last night and my house wasn't where I left it", "In my experience there's two ways to get things done, the right way and the drunk way" , "Welcome to Twitter - if you are not already following a mom who drinks wine one will be assigned to you")
+
 
 //recipes created as objects
 var mule = new Recipe ("Moscow Mule", "instructions");
@@ -208,12 +216,18 @@ $(document).ready(function(){
   });
 
   //--------------------DRINK RANDOMIZER------------------
-  //click function that generates a random recipe and displays the recipe details
+  //click function that
   $("#click-bartender").click(function(){
-
-    $(".speech").text("I'll Never Get Tired Of Pouring These Bad Boys!");
+    //random number function for the bartender to generate jokes
+    var randomNumberBartender = function(thing) {
+      return Math.floor((Math.random() * thing) + 1);
+    };
+    //print jokes to speech bubble
+    var whichJoke = randomNumberBartender(mike.jokes.length);
+        $(".speech").text(mike.jokes[whichJoke]);
+    // generates a random recipe and displays the recipe details
+    var randomNumber = Math.floor(Math.random() *25 + 1);
       $("#display-recipe-group").slideDown(1000);
-      var randomNumber = Math.floor(Math.random() *25 + 1);
       newRecipeBook.recipes.forEach(function(recipe){
         var recipeValue = recipe.value;
         if (randomNumber === recipeValue) {
@@ -234,32 +248,27 @@ $(document).ready(function(){
 
 //-------------LIQUOR TREE----------------------------
       //Click function for liquor tree that sets a variable equal to the type of alcohol that the image represents and builds clickable drink names based off the type of alcohol that the user chooses.
-      $(".alcoholBottle").click(function() {
-        $(".display-clickable-recipe").text("");
-        var alcoholName = $(this).attr("alt");
-        newRecipeBook.recipes.forEach(function(recipe){
-          var recipeType = recipe.type;
-          if (recipeType === alcoholName) {
-          $(".display-clickable-recipe").append("<p class=clickable-recipe-name>" + recipe.name + "</p>" );
-        } else {return;}
-          //Click function that displays drink recipe info for the liquor tree
-          $(".clickable-recipe-name").last().click(function(){
-            $(".display-recipe-info").show();
-                $(".display-image").empty().append("<img class=rotate src=" + recipe.img + ">");
-                $(".display-recipe-instructions").empty();
-                $("#display-ingredients").empty();
-                $(".display-recipe-info h2").empty();
-                $(".display-recipe-info h2").empty().append(recipe.name);
-                recipe.ingredients.forEach(function(ingredient){
-                  $("#display-ingredients").append("<li>" + ingredient + "</li>")
-                  });
-                $(".display-recipe-instructions").append(recipe.instructions);
+  $(".alcoholBottle").click(function() {
+    $(".display-clickable-recipe").text("");
+    var alcoholName = $(this).attr("alt");
+    newRecipeBook.recipes.forEach(function(recipe){
+      var recipeType = recipe.type;
+      if (recipeType === alcoholName) {
+      $(".display-clickable-recipe").append("<p class=clickable-recipe-name>" + recipe.name + "</p>" );
+    } else {return;}
+      //Click function that displays drink recipe info for the liquor tree
+      $(".clickable-recipe-name").last().click(function(){
+        $(".display-recipe-info").show();
+            $(".display-image").empty().append("<img class=rotate src=" + recipe.img + ">");
+            $(".display-recipe-instructions").empty();
+            $("#display-ingredients").empty();
+            $(".display-recipe-info h2").empty();
+            $(".display-recipe-info h2").empty().append(recipe.name);
+            recipe.ingredients.forEach(function(ingredient){
+              $("#display-ingredients").append("<li>" + ingredient + "</li>")
               });
-
-            });
+            $(".display-recipe-instructions").append(recipe.instructions);
           });
-
-
-
-
+        });
+      });
 });
