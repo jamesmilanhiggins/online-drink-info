@@ -3,7 +3,7 @@
 
 #### _This app will display a random drink and show drinks based on alcohol type chosen by user. {2017}_
 
-[Link to live site] (http://jamesmilanhiggins.github.io/online-drink-info)
+Visit live site [here](http://jamesmilanhiggins.github.io/online-drink-info)
 
 #### By _**{Contributors}**_
 * _James Higgins_
